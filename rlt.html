@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>관계에서</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	<script type="text/javascript" src="wow.min.js"></script>
+	<style type="text/css">
+		html{scroll-behavior: smooth;}
+		body{background-color: #002fed;}
+		header{height: 50px;}
+		section{}
+		.row{width:1000px; margin:auto;padding:10px;position: relative;}
+		img{display: block;}
+		.a{width: 200px;padding-left: 20px;position: fixed;}
+		.b{margin: auto;height: 700px;position: center;position: fixed;left: 470px;}
+		.c{margin: auto;width: 850px; margin-top: -20px;position: center;position: fixed;left: 390px;top: 750px;}
+		.d{height: 700px;transform: rotate(340deg);}
+		.e{height: 700px;transform: rotate(20deg);}
+		.absolute{position: absolute; display: block;}
+		.lft{animation:lft 2s;animation-fill-mode: forwards;}
+		.rgt{animation:rgt 2s;animation-fill-mode: forwards;}
+		@keyframes lft{from{opacity: 0.9; margin-left: -600px;} to{opacity: 1; margin-right: 700px;}}
+		@keyframes rgt{from{opacity: 0.9; margin-left: 1300px;} to{opacity: 1; margin-left: 500px;}}
+	</style>
+</head>
+<body>
+	<header>
+		<a href="index.html">
+			<img src="subtitle.png" class="a">
+		</a>
+	</header>
+	<section>
+		<img src="relation.png" class="b">
+		<img src="inrelation.png" class="c">
+	</section>
+	<section>
+		<div class="row">
+			<div class="absolute">
+				<img src="r1.png" class="d absolute wow lft" style="top: 1500px;left: 100px;">
+				<img src="r2.png" class="e absolute wow rgt" style="top: 1500px;left: -100px;">
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="row">
+			<div class="absolute">
+				<img src="r3.png" class="d absolute wow lft" style="top: 2700px;left: 100px;">
+				<img src="r4.png" class="e absolute wow rgt" style="top: 2700px;left: -100px;">
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="row">
+			<div class="absolute">
+				<img src="r5.png" class="d absolute wow lft" style="top: 3900px;left: 100px;">
+				<img src="r6.png" class="e absolute wow rgt" style="top: 3900px;left: -100px;">
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="row">
+			<div class="absolute">
+				<img src="r7.png" class="d absolute wow lft" style="top: 5100px;left: 100px;">
+				<img src="r8.png" class="e absolute wow rgt" style="top: 5100px;left: -100px;">
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="row">
+			<div class="absolute">
+				<img src="r9.png" class="d absolute wow lft" style="top: 6300px;left: 100px;">
+				<img src="r0.png" class="e absolute wow rgt" style="top: 6300px;left: -100px;">
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript">
+	new WOW().init();
+    console.log("ok");
+	</script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>리빙포인트</title>
+	<meta name="description" content="알고있으면 도움되는, 리빙포인트">
+
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://">
+	<meta property="og:image" content="thumbnail.jpg">
+	<meta property="og:title" content="리빙포인트">
+	<meta property="og:description" content="알고있으면 도움되는, 리빙포인트">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	<style type="text/css">
+		html{margin: auto;width: 80%;}
+		body{background-image: url("pattern.png");background-color: #002fed;background-size: 80%;}
+		section{}
+		.row{width: 450px;margin: auto;position: relative;}
+		img{margin: auto;}
+		.a{width: 100%;display: block;}
+		.b{width: 50%;display: block;}
+		.absolute{position: absolute; display: block;}
+	</style>
+</head>
+<body>
+<header>
+	<img src="title.png" class="a">
+</header>
+<section>
+	<a href="mrt.html">
+		<div class="row" style="height: 600px;">
+			<div class="absolute">
+				<img src="mart.png" class="absolute drag" style="width: 600px;left:-320px; top:280px;">
+			</div>
+		</div>
+	</a>
+</section>
+<section>
+	<a href="rlt.html">
+		<div class="row" style="height: 600px;">
+			<div class="absolute">
+				<img src="relation.png" class="absolute drag" style="width: 600px;left:290px; top:0px;">
+			</div>
+		</div>
+	</a>
+</section>
+<section>
+	<a href="itn.html">
+		<div class="row" style="height: 600px;">
+			<div class="absolute">
+				<img src="internet.png" class="absolute drag" style="width: 600px;left:-510px; top:-270px;">
+			</div>
+		</div>
+	</a>
+</section>
+<section>
+	<a href="soc.html">
+		<div class="row" style="height: 600px;">
+			<div class="absolute">
+				<img src="social.png" class="absolute drag" style="width: 600px;left:220px; top:-500px;">
+			</div>
+		</div>
+	</a>
+</section>
+<section>
+	<a href="lfe.html">
+		<div class="row" style="height: 600px;">
+			<div class="absolute">
+				<img src="life.png" class="absolute drag" style="width: 600px;left:-320px; top:-800px;">
+			</div>
+		</div>
+	</a>
+</section>
+	<script type="text/javascript">
+		(function(){
+			var d = false;
+			var target,cx,cy,lx,ly;
+			var t = document.getElementsByClassName("drag");
+			for(var i=0; i<t.length; i++){
+				t[i].style.display = "block";
+				t[i].style.position = "absolute";
+				t[i].style.cursor = "pointer";
+				t[i].ondragstart = function(e){e.preventDefault();};
+				t[i].onmousedown = function(e){ d = true; target = e.target; cx = e.clientX; cy = e.clientY; lx=parseInt(e.target.style.left); ly=parseInt(e.target.style.top);console.log(lx,ly);}
+				t[i].onmouseup = function(){ d = false;}
+				window.onmousemove = function(e){ 
+					if(d){ target.style.left = (lx + e.clientX - cx) + "px"; target.style.top = (ly + e.clientY - cy) + "px";}
+				}
+			}
+		})();
+	</script>
+	<footer>
+		
+	</footer>
+</body>
+</html>
